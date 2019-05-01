@@ -31,7 +31,8 @@ var scrollToAnchor=function(e){
 		var scrollTo=document.querySelector(id);
 	}	
 	if(scrollTo){
-		animate(document.scrollingElement,"scrollTop", "", 0, scrollTo.offsetTop, 250, true);
+		var current_position=document.documentElement.scrollTop;
+		animate(document.scrollingElement,"scrollTop", "", current_position, scrollTo.offsetTop, 250, true);
 	}	
 }	
 
